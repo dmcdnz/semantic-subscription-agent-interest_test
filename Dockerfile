@@ -29,11 +29,11 @@ RUN mkdir -p ./fine_tuned_model/1_Pooling/
 # Just use standard COPY commands and accept that some might produce warnings
 
 # Copy the entire model directory if it exists
-# Create directory for fine-tuned model (will be populated during build)
-RUN mkdir -p ./fine_tuned_model/
+																		
+COPY fine_tuned_model/ ./fine_tuned_model/
 
-# Add a README in the fine_tuned_model directory with instructions
-RUN echo "# Fine-tuned Model Directory\n\nPlace your fine-tuned sentence transformer model files here to improve agent interest detection.\nThe agent will automatically use this model when present." > ./fine_tuned_model/README.md
+																  
+																																																									 
 
 # Optional: Also try to copy specific files individually
 # These may produce warnings but won't fail the build if files don't exist
